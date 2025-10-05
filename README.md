@@ -1,4 +1,5 @@
 # 🏗️ AWS VPC Automation Project  
+Hands-on AWS networking project building a secure VPC with public/private subnets, Internet/NAT gateways, and automated routing via AWS CLI.
 **Author:** Ayush Sharma  
 **Track:** AWS Cloud + DevOps | Hands-on Project  
 **Repository:** [aws-vpc-project](https://github.com/aysharmaDevops/aws-vpc-project)
