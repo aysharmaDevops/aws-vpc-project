@@ -1,0 +1,37 @@
+# Sample masked CLI outputs (do NOT expose real IDs in public repos)
+
+$ aws ec2 describe-vpcs --query "Vpcs[*].{ID:VpcId,CIDR:CidrBlock}" --output table
+------------------------------------------------
+|               DescribeVpcs                   |
++----------------+----------------------------+
+|      CIDR      |            ID              |
++----------------+----------------------------+
+| 10.0.0.0/16    | vpc-xxxxxxxxxxxx           |
++----------------+----------------------------+
+
+$ aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-xxxxxxxxxxxx" --output table
+----------------------------------------------------------------
+|                     DescribeSubnets                        |
++------------+--------------+---------------------+-----------+
+|    AZ      |    CIDR      |         ID          |  Public   |
++------------+--------------+---------------------+-----------+
+| us-east-1a | 10.0.1.0/24  | subnet-xxxxxxxxxxA  | True      |
+| us-east-1a | 10.0.4.0/24  | subnet-xxxxxxxxxxB  | False     |
+| us-east-1b | 10.0.2.0/24  | subnet-xxxxxxxxxxC  | False     |
++------------+--------------+---------------------+-----------+
+
+$ aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-xxxxxxxxxxxx" --output table
+-------------------------------------------------------------------------
+|                DescribeRouteTables                                      |
++--------------------------------+---------------------------------------+
+| ID: rtb-xxxxxxxxxxxx           | Routes: 0.0.0.0/0 -> igw-xxxxxxxxxxx  |
++--------------------------------+---------------------------------------+
+
+$ aws ec2 describe-nat-gateways --filter "Name=vpc-id,Values=vpc-xxxxxxxxxxxx" --output table
+-------------------------------------
+| DescribeNatGateways                |
++------------+-----------+-----------+
+| ID         | State     | Subnet    |
++------------+-----------+-----------+
+| nat-xxxxxx | available | subnet-...|
++------------+-----------+-----------+
