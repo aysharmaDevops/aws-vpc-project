@@ -89,17 +89,19 @@ Private SG: sg-xxxxxxxxxxxxx
 Public NACL: acl-xxxxxxxxxxxxx
 Private NACL: acl-xxxxxxxxxxxxx
 
-🖼️ Architecture Diagram (Planned)
+## 🧭 Architecture Diagram
 
-A visual AWS architecture diagram will be added under
-PowerShell-Automation/images/architecture.png
+<p align="center">
+  <img src="https://via.placeholder.com/1000x550/232f3e/ffffff?text=AWS+Multi-AZ+VPC+Architecture+%E2%80%94+Public+%2B+Private+Subnets+%7C+IGW+%7C+NAT+%7C+RTs+%7C+NACLs+%7C+SGs" 
+       alt="AWS Multi-AZ VPC Architecture — Public + Private Subnets | IGW | NAT | RTs | NACLs | SGs"
+       width="90%">
+</p>
 
-It will illustrate:
-	•	VPC across two AZs
-	•	Public and private subnets
-	•	IGW + NAT
-	•	Route tables, SGs, and NACLs
+<p align="center">
+  <em>High-level representation of the Multi-AZ AWS VPC setup with Internet Gateway, NAT Gateway, Route Tables, Network ACLs, and Security Groups.</em>
+</p>
 
+---
 ⸻
 
 🧰 Prerequisites
