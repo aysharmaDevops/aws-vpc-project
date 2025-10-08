@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/1200x300.png?text=Ayush+Sharma+-+AWS+Multi-AZ+VPC+Automation+%7C+PowerShell+%26+CI" alt="Ayush Sharma AWS PowerShell Automation Banner" width="100%">
+  <img src="https://placehold.co/1200x250/0d1117/FF9900?text=Ayush+Sharma+-+AWS+%7C+PowerShell+%7C+Cloud+Automation" alt="Ayush Sharma AWS PowerShell Automation Banner" width="100%">
 </p>
 
 # AWS Multi-AZ VPC Automation using PowerShell
