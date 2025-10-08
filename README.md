@@ -1,175 +1,120 @@
-# 🏗️ AWS VPC Automation Project  
+# 🚀 AWS Multi-AZ VPC Automation using PowerShell
 
-Hands-on AWS networking project building a secure VPC with public/private subnets, Internet/NAT gateways, and automated routing via AWS CLI.
-
-**Author:** Ayush Sharma  
-**Track:** AWS Cloud + DevOps | Hands-on Project  
-**Repository:** [aws-vpc-project](https://github.com/aysharmaDevops/aws-vpc-project)
+### Author: [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-575010102)
+*Cloud Solutions Architect | PowerShell & AWS Specialist*  
+📧 ayush.87sharma@hotmail.com  
 
 ---
 
-## 🌐 Project Overview
+## 🧩 Overview
 
-This project automates the creation of a **secure and scalable AWS Virtual Private Cloud (VPC)** using **AWS CLI and Bash scripting**.  
-It demonstrates practical understanding of **network segmentation, routing, and automation** — key competencies for **AWS Solutions Architect** and **DevOps Engineer** roles.
-
-The entire infrastructure was created and version-controlled using **Git & GitHub**, reflecting **real-world best practices** followed by cloud professionals.
+This project automates the creation of a *highly available Multi-AZ AWS VPC* environment using *PowerShell and AWS CLI*.  
+It provisions all the core networking components programmatically — allowing you to stand up and tear down a full AWS network with a single command.
 
 ---
 
-## 🧩 Architecture Summary
+## 🏗️ Infrastructure Components
 
-The following AWS components are provisioned automatically:
+The automated PowerShell scripts build the following:
 
 | Component | Description |
-|------------|--------------|
-| 🕸️ **VPC** | Custom VPC (`10.0.0.0/16`) created for isolation |
-| 🌍 **Public Subnet** | Internet-facing subnet for public resources |
-| 🔒 **Private Subnet** | Internal subnet with restricted access |
-| 🌐 **Internet Gateway (IGW)** | Enables public internet connectivity |
-| 🔁 **NAT Gateway** | Allows private instances secure outbound access |
-| 🧭 **Route Tables** | Configured for both public and private subnet routing |
-| 🖥️ **EC2 (optional extension)** | Can be deployed later into public/private subnets |
+|------------|-------------|
+| *VPC* | Creates a custom VPC with a /16 CIDR range |
+| *Subnets* | Public + Private subnets across multiple Availability Zones |
+| *Internet Gateway (IGW)* | Enables public subnet internet access |
+| *NAT Gateway* | Provides outbound access for private subnets |
+| *Route Tables* | Public & Private route tables with associations |
+| *Security Groups* | Granular ingress/egress traffic control |
+| *Network ACLs* | Stateless traffic filtering for public and private layers |
 
 ---
 
-## 🧠 Architecture Diagram
+## 🧠 Project Structure
 
-Below is the conceptual diagram of the VPC environment:
-
-pgsql
-Copy code
-               +-------------------------------------+
-               |          Ayush-VPC (10.0.0.0/16)    |
-               |                                     |
-               |   +----------------------------+    |
-               |   | Public Subnet (10.0.1.0/24)|    |
-               |   | IGW → Internet             |    |
-               |   +----------------------------+    |
-               |                                     |
-               |   +----------------------------+    |
-               |   | Private Subnet (10.0.2.0/24)|   |
-               |   | NAT Gateway → Internet      |   |
-               |   +----------------------------+    |
-               +-------------------------------------+
-yaml
-Copy code
-
-📘 *Alternatively, see full architecture image below:*  
-![AWS VPC Architecture](diagrams/aws_vpc_architecture.png)
-
----
-
-## ⚙️ Automation Scripts
-
-Each stage of the VPC build is modularized into scripts for reusability.
-
-| Script Name | Description |
-|--------------|-------------|
-| `01_create_vpc.sh` | Creates the VPC and applies project tag |
-| `02_create_subnets.sh` | Creates and tags both public and private subnets |
-| `03_create_igw_and_routes.sh` | Attaches Internet Gateway and configures public routing |
-| `04_nat_and_private_routes.sh` | Launches NAT Gateway and configures private routing |
-
-All scripts are written in **Bash** and executed via **AWS CLI** — designed for easy reuse and CI/CD integration.
-
----
-
-## 💾 Output Samples
-
-To maintain security, all AWS resource IDs have been masked in outputs.  
-You can review them in:
-
-📂 [`outputs/cli_outputs_masked.txt`](outputs/cli_outputs_masked.txt)
-
-Example:
-```bash
-Creating VPC (10.0.0.0/16)...
-Created VPC ID: vpc-xxxxxxxxxxxxx
-Created Subnet IDs: subnet-xxxxxxxxx, subnet-yyyyyyyyy
-Created Internet Gateway ID: igw-xxxxxxxxx
-Created NAT Gateway ID: nat-xxxxxxxxx
-🧠 Key Concepts Demonstrated
-✅ AWS VPC and CIDR Block Planning
-✅ Subnet Segmentation (Public vs. Private)
-✅ Internet Gateway & NAT Gateway Configuration
-✅ Route Table Association
-✅ AWS CLI Automation with Shell Scripting
-✅ Infrastructure Version Control (Git)
-✅ Documentation and Presentation for Cloud Portfolios
-
-🧰 Tools & Technologies Used
-Category	Tool
-☁️ Cloud Provider	Amazon Web Services (AWS)
-🧑‍💻 Automation	AWS CLI, Bash
-📘 Documentation	Markdown, GitHub Pages
-🔒 Security	Masked resource outputs
-📦 Version Control	Git, GitHub
-🧩 Diagram	Draw.io / Lucidchart
-
-💼 Use Case — For Manager / Client Review
-This repository demonstrates:
-
-Real AWS hands-on implementation aligned with professional certification tracks
-
-Automation-first approach instead of manual console configuration
-
-Security-conscious network design (public/private separation + NAT)
-
-Clear, versioned documentation — like enterprise DevOps repositories
-
-Scalable foundation for adding EC2, S3, ALB, or CI/CD pipelines later
-
-💬 This project proves practical AWS proficiency and readiness for cloud automation tasks.
-
-📊 Project Folder Structure
-graphql
-Copy code
 aws-vpc-project/
-├── diagrams/                     # Architecture diagrams
-│   └── aws_vpc_architecture.png
-├── outputs/                      # AWS CLI command outputs (masked)
-│   └── cli_outputs_masked.txt
-├── scripts/                      # Automation scripts for each component
-│   ├── 01_create_vpc.sh
-│   ├── 02_create_subnets.sh
-│   ├── 03_create_igw_and_routes.sh
-│   └── 04_nat_and_private_routes.sh
+├── diagrams/                   # Architecture visuals
+├── outputs/                    # Execution outputs (optional)
+├── scripts/                    # Placeholder for additional code
+└── PowerShell-Automation/      # Automation logic
+├── Ayush-VPC-FullBuild.ps1
+├── cleanup.ps1
+└── README.md
+
+## ⚙️ PowerShell Automation Scripts
+
+### 1️⃣ Ayush-VPC-FullBuild.ps1
+> Provisions a complete AWS VPC setup (Multi-AZ with subnets, NAT, SGs, NACLs, etc.)
+
+*Usage:*
+```powershell
+powershell -ExecutionPolicy Bypass -File .\Ayush-VPC-FullBuild.ps1
+
+2️⃣ cleanup.ps1
+
+Safely deletes all chargeable AWS resources (NAT, Elastic IPs, VPC) in one go.
+Usage:
+powershell -ExecutionPolicy Bypass -File .\cleanup.ps1
+
+📊 Example Output
+
+Once completed, the script displays:
+✅ SETUP COMPLETE!
+VPC: vpc-xxxxxxxxxxxxxxxxx
+Public Subnet: subnet-xxxxxxxxxxxxxxx
+Private Subnets: subnet-xxxxxx, subnet-xxxxxx
+IGW: igw-xxxxxxxxxxxxx
+NAT: nat-xxxxxxxxxxxxx
+Public SG: sg-xxxxxxxxxxxxx
+Private SG: sg-xxxxxxxxxxxxx
+Public NACL: acl-xxxxxxxxxxxxx
+Private NACL: acl-xxxxxxxxxxxxx
+
+🖼️ Architecture Diagram (Planned)
+
+A visual AWS architecture diagram will be added under
+PowerShell-Automation/images/architecture.png
+
+It will illustrate:
+	•	VPC across two AZs
+	•	Public and private subnets
+	•	IGW + NAT
+	•	Route tables, SGs, and NACLs
+
+⸻
+
+🧰 Prerequisites
+	•	AWS CLI v2.31+
+	•	PowerShell v5.1+
+	•	IAM user with sufficient permissions (AmazonVPCFullAccess, EC2FullAccess)
+•	AWS credentials configured via:
+aws configure
+
+📬 Contact
+
+💼 Ayush Sharma
+📧 ayush.87sharma@hotmail.com
+🔗 LinkedIn Profile
+
+⸻
+
+Automating AWS Infrastructure the Right Way — with PowerShell Precision ⚡
+### Step 2️⃣ — Commit the Changes
+1. Scroll down.
+2. Commit message:
+docs: enhance project README for client presentation
+3. Click *Commit changes* ✅
+
+---
+
+### Step 3️⃣ — Confirm the Repo Layout
+Your repo should now look like this:
+aws-vpc-project/
+├── PowerShell-Automation/
+│   ├── Ayush-VPC-FullBuild.ps1
+│   ├── cleanup.ps1
+│   └── README.md
+├── diagrams/
+├── outputs/
+├── scripts/
 ├── LICENSE
 └── README.md
-🔮 Next Steps / Planned Enhancements
- Add EC2 instance deployment in both subnets
-
- Add S3 bucket for static website hosting
-
- Implement Terraform IaC version
-
- Integrate GitHub Actions for CI/CD pipeline
-
- Add CloudWatch monitoring dashboard
-
-🏁 Results Snapshot
-Below is an example of the final AWS environment (representational view):
-
-java
-Copy code
-VPC: Ayush-VPC (10.0.0.0/16)
-├── Public Subnet (10.0.1.0/24)
-│   ├── Internet Gateway (IGW)
-│   └── Route Table → 0.0.0.0/0 via IGW
-├── Private Subnet (10.0.2.0/24)
-│   ├── NAT Gateway (EIP attached)
-│   └── Route Table → 0.0.0.0/0 via NAT
-🧾 License
-This project is licensed under the MIT License — free for learning and demonstration purposes.
-See LICENSE for details.
-
-🧑‍💻 Connect with Me
-Ayush Sharma
-📧 ayush.87sharma@gmail.com
-🌐 LinkedIn
-💻 GitHub
-
-“One day, one step, one win at a time — I am building my future.”
-
-⭐ If you found this project helpful, consider giving it a star on GitHub!
