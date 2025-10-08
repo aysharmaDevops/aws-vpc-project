@@ -2,7 +2,7 @@
 End-to-end AWS networking automation using PowerShell | Infrastructure-as-Code | DevOps-ready
 
 <p align="center">
-  <img src="https://via.placeholder.com/1200x300.png?text=Ayush+Sharma+-+AWS+%26+PowerShell+Automation" alt="Ayush Sharma - AWS & PowerShell Automation" width="100%">
+  <img src="https://via.placeholder.com/1200x300/FFF4E0/FF9900?text=Ayush+Sharma+-+AWS+Multi-AZ+VPC+Automation+%7C+PowerShell+%26+Cloud+Architect" alt="Ayush Sharma AWS PowerShell Automation Banner" width="100%">
 </p>
 
 ## 💼 Project Highlights
