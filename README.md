@@ -1,7 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aysharmaDevops/aws-vpc-project/main/PowerShell-Automation/images/banner.png" alt="Ayush Sharma - AWS & PowerShell Automation" width="100%">
+  <img src="https://via.placeholder.com/1200x300/0a2540/ffffff?text=Ayush+Sharma+-+Cloud+Solutions+Architect+%7C+PowerShell+%26+AWS+Specialist" 
+       alt="Ayush Sharma - Cloud Solutions Architect | PowerShell & AWS Specialist" 
+       width="100%">
 </p>
-
 # 🚀 AWS Multi-AZ VPC Automation using PowerShell
 
 ### Author: [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-575010102)
