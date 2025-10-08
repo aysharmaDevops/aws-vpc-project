@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://via.placeholder.com/1200x300.png?text=Ayush+Sharma+-+AWS+Multi-AZ+VPC+Automation+%7C+PowerShell+%26+CI" alt="Ayush Sharma AWS PowerShell Automation Banner" width="100%">
+</p>
+
 # AWS Multi-AZ VPC Automation using PowerShell
 End-to-end AWS networking automation using PowerShell | Infrastructure-as-Code | DevOps-ready
 
