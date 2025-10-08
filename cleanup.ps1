@@ -1,0 +1,1 @@
+# Placeholder PowerShell cleanup script
