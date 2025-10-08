@@ -88,7 +88,7 @@ Public SG: sg-xxxxxxxxxxxxx
 Private SG: sg-xxxxxxxxxxxxx
 Public NACL: acl-xxxxxxxxxxxxx
 Private NACL: acl-xxxxxxxxxxxxx
-
+---
 ## 🧭 Architecture Diagram
 
 <p align="center">
