@@ -8,6 +8,8 @@
 This project automates a **Multi-AZ AWS VPC setup** using **PowerShell**, designed for enterprise-grade reliability and scalability.  
 It demonstrates how to create a **VPC**, **public and private subnets**, **NAT gateways**, **route tables**, **security groups**, and **NACLs** — both manually and via automation.
 
+“Unlike Terraform, this project demonstrates AWS resource automation purely via PowerShell and AWS CLI — ideal for Windows-based DevOps pipelines.”
+
 ## 🧠 Architecture Diagram
 <p align="center">
   <img src="https://via.placeholder.com/1000x600.png?text=AWS+Multi-AZ+VPC+Architecture" alt="AWS Multi-AZ Architecture Diagram" width="90%">
