@@ -37,6 +37,7 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 This project follows **AWS best practices for cost optimization** and uses free-tier or short-lived resources only.
 
 ## 🧪 Demo Output
+
 Below is a sample of console output when the script runs:
 Creating VPC: 10.0.0.0/16
 Creating Public Subnet in us-east-1a
