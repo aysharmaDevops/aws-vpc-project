@@ -30,6 +30,17 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 ## 🧾 Cost Awareness Note
 This project follows **AWS best practices for cost optimization** and uses free-tier or short-lived resources only.
 
+## 🧪 Demo Output
+Below is a sample of console output when the script runs:
+Creating VPC: 10.0.0.0/16
+Creating Public Subnet in us-east-1a
+Creating Private Subnet in us-east-1b
+Attaching Internet Gateway…
+Setting up NAT Gateway…
+Creating Route Tables…
+Associating Subnets and Routes…
+✅ Deployment Complete!
+
 ## 📬 Connect with Me
 **Ayush Sharma** — *Cloud Solutions Architect | PowerShell & AWS Specialist*  
 📧 Email: [Ayush.87sharma@hotmail.com](mailto:Ayush.87sharma@hotmail.com)  
