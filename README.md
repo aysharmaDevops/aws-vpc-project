@@ -1,7 +1,18 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aysharmaDevops/aws-vpc-project/main/PowerShell-Automation/images/banner.png" alt="Ayush Sharma - AWS & PowerShell Automation" width="100%">
+</p>
+
 # 🚀 AWS Multi-AZ VPC Automation using PowerShell
 
 ### Author: [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-575010102)
 *Cloud Solutions Architect | PowerShell & AWS Specialist*  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aysharmaDevops/aws-vpc-project/main/PowerShell-Automation/images/aws-vpc-architecture.png" alt="AWS VPC Architecture" width="800">
+</p>
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Automation](https://img.shields.io/badge/Automation-4CAF50?style=for-the-badge&logo=windows-terminal&logoColor=white)
+![Infrastructure-as-Code](https://img.shields.io/badge/IaC-Purple?style=for-the-badge)
 📧 ayush.87sharma@hotmail.com  
 
 ---
