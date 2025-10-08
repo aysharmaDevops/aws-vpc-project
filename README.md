@@ -1,27 +1,40 @@
-<p align="center">
+[8:53 pm, 8/10/2025] Ayush Sharma: <p align="center">
   <img src="https://via.placeholder.com/1200x300/0a2540/ffffff?text=Ayush+Sharma+-+Cloud+Solutions+Architect+%7C+PowerShell+%26+AWS+Specialist" 
        alt="Ayush Sharma - Cloud Solutions Architect | PowerShell & AWS Specialist" 
        width="100%">
 </p>
-# 🚀 AWS Multi-AZ VPC Automation using PowerShell
-
-### Author: [Ayush Sharma](https://www.linkedin.com/in/ayush-sharma-575010102)
-*Cloud Solutions Architect | PowerShell & AWS Specialist*  
-<p align="center">
-  <img src="https://raw.githubusercontent.com/aysharmaDevops/aws-vpc-project/main/PowerShell-Automation/images/aws-vpc-architecture.png" alt="AWS VPC Architecture" width="800">
+[8:58 pm, 8/10/2025] Ayush Sharma: <p align="center">
+  <img src="https://via.placeholder.com/1200x300/0a2540/ffffff?text=Ayush+Sharma+-+Cloud+Solutions+Architect+%7C+PowerShell+%26+AWS+Specialist" 
+       alt="Ayush Sharma - Cloud Solutions Architect | PowerShell & AWS Specialist" 
+       width="100%">
 </p>
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-![Automation](https://img.shields.io/badge/Automation-4CAF50?style=for-the-badge&logo=windows-terminal&logoColor=white)
-![Infrastructure-as-Code](https://img.shields.io/badge/IaC-Purple?style=for-the-badge)
-📧 ayush.87sharma@hotmail.com  
+
+<h1 align="center">🚀 AWS Multi-AZ VPC Automation using PowerShell</h1>
+
+<p align="center">
+  <strong>Author:</strong> <a href="https://www.linkedin.com/in/ayush-sharma-575010102">Ayush Sharma</a><br>
+  <em>Cloud Solutions Architect | PowerShell & AWS Specialist</em><br>
+  📧 <a href="mailto:ayush.87sharma@hotmail.com">ayush.87sharma@hotmail.com</a>
+</p>
+
+<p align="center">
+  <a href="https://docs.microsoft.com/powershell/">
+    <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell Badge"/>
+  </a>
+  <a href="https://aws.amazon.com/">
+    <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS Badge"/>
+  </a>
+  <img src="https://img.shields.io/badge/Automation-4CAF50?style=for-the-badge&logo=windows-terminal&logoColor=white" alt="Automation Badge"/>
+  <img src="https://img.shields.io/badge/IaC-Purple?style=for-the-badge&logo=azuredevops&logoColor=white" alt="IaC Badge"/>
+</p>
 
 ---
 
-## 🧩 Overview
+## 🌐 Overview
+This project automates the creation of a *highly available Multi-AZ AWS VPC* environment using PowerShell and AWS CLI. It’s designed to be easily reproducible, scalable, and ideal for DevOps engineers, cloud labs, or freelancing projects.
 
-This project automates the creation of a *highly available Multi-AZ AWS VPC* environment using *PowerShell and AWS CLI*.  
-It provisions all the core networking components programmatically — allowing you to stand up and tear down a full AWS network with a single command.
+---
+
 
 ---
 
