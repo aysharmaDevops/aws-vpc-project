@@ -19,7 +19,7 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 
 ## 🧠 Architecture Diagram
 <p align="center">
-  <img src="https://via.placeholder.com/1000x600.png?text=AWS+Multi-AZ+VPC+Architecture" alt="AWS Multi-AZ Architecture Diagram" width="90%">
+  <img src="https://placehold.co/1000x550/0d1117/FF9900?text=AWS+Multi-AZ+VPC+Architecture+-+Public+%2B+Private+Subnets+%7C+IGW+%7C+NAT+%7C+RTs+%7C+NACLs+%7C+SGs" alt="AWS Multi-AZ VPC Architecture Diagram" width="90%">
 </p>
 
 ---
