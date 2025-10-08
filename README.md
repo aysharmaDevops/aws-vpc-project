@@ -5,8 +5,6 @@
 # AWS Multi-AZ VPC Automation using PowerShell
 End-to-end AWS networking automation using PowerShell | Infrastructure-as-Code | DevOps-ready
 
-![Ayush Sharma AWS PowerShell Automation Banner](https://placehold.co/1200x300/FFF4E0/FF9900?text=Ayush+Sharma+-+AWS+Multi-AZ+VPC+Automation+%7C+PowerShell+%26+Cloud+Architect)
-
 ## 💼 Project Highlights
 - Fully automated AWS VPC setup using PowerShell
 - Covers multi-AZ architecture, route tables, NACLs, and security groups
