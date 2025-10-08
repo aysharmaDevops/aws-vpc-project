@@ -1,9 +1,4 @@
-[8:53 pm, 8/10/2025] Ayush Sharma: <p align="center">
-  <img src="https://via.placeholder.com/1200x300/0a2540/ffffff?text=Ayush+Sharma+-+Cloud+Solutions+Architect+%7C+PowerShell+%26+AWS+Specialist" 
-       alt="Ayush Sharma - Cloud Solutions Architect | PowerShell & AWS Specialist" 
-       width="100%">
-</p>
-[8:58 pm, 8/10/2025] Ayush Sharma: <p align="center">
+<p align="center">
   <img src="https://via.placeholder.com/1200x300/0a2540/ffffff?text=Ayush+Sharma+-+Cloud+Solutions+Architect+%7C+PowerShell+%26+AWS+Specialist" 
        alt="Ayush Sharma - Cloud Solutions Architect | PowerShell & AWS Specialist" 
        width="100%">
