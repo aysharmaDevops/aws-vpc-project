@@ -131,9 +131,3 @@ connect!
 
 ---
 
-Freelancing Portfolio Note:
-
-When posting your project link on freelancing sites (Upwork, Fiverr, LinkedIn, etc.) - use this tagline:
-
-Automated AWS Multi-AZ VPC Setup using PowerShell (IaC) - includes Subnets, Route Tables, NAT
-Gateway, IGW, NACLs, and SGs
