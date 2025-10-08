@@ -1,8 +1,15 @@
 # AWS Multi-AZ VPC Automation using PowerShell
+End-to-end AWS networking automation using PowerShell | Infrastructure-as-Code | DevOps-ready
 
 <p align="center">
   <img src="https://via.placeholder.com/1200x300.png?text=Ayush+Sharma+-+AWS+%26+PowerShell+Automation" alt="Ayush Sharma - AWS & PowerShell Automation" width="100%">
 </p>
+
+## 💼 Project Highlights
+- Fully automated AWS VPC setup using PowerShell
+- Covers multi-AZ architecture, route tables, NACLs, and security groups
+- Includes teardown script for cost-efficient reusability
+- Ideal reference for DevOps interviews and freelance AWS automation tasks
 
 ## 🚀 Overview
 This project automates a **Multi-AZ AWS VPC setup** using **PowerShell**, designed for enterprise-grade reliability and scalability.  
@@ -14,6 +21,21 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 <p align="center">
   <img src="https://via.placeholder.com/1000x600.png?text=AWS+Multi-AZ+VPC+Architecture" alt="AWS Multi-AZ Architecture Diagram" width="90%">
 </p>
+
+---
+
+## 🧩 Prerequisites
+
+Before running the PowerShell automation scripts, ensure the following requirements are met:
+
+- *AWS CLI v2.3+* installed and configured  
+- *PowerShell v5.1+* (Windows) or *PowerShell Core (7+)* (Linux/macOS)  
+- *IAM user with permissions* for:
+  - AmazonVPCFullAccess
+  - EC2FullAccess
+- *AWS credentials configured* via:
+  ```bash
+  aws configure
 
 ## 🧩 Key Components
 “Subnets distributed across multiple AZs ensure fault tolerance and scalability.”
@@ -33,20 +55,61 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 - `PowerShell-Automation/images/banner.png` → Placeholder banner (replace later)
 - `PowerShell-Automation/images/aws-vpc-architecture.png` → Placeholder diagram (replace later)
 
-## 🧾 Cost Awareness Note
-This project follows **AWS best practices for cost optimization** and uses free-tier or short-lived resources only.
+---
 
 ## 🧪 Demo Output
 
-Below is a sample of console output when the script runs:
+Below is a sample of the console output generated when running the Ayush-VPC-FullBuild.ps1 automation script:
+
 Creating VPC: 10.0.0.0/16
-Creating Public Subnet in us-east-1a
-Creating Private Subnet in us-east-1b
+✅ VPC created: vpc-042d1d117b588c730
+
+Creating Public Subnet in us-east-1a…
+✅ Public Subnet created: subnet-0a82cb55a93068f54
+
+Creating Private Subnet in us-east-1b…
+✅ Private Subnet created: subnet-0ada16ac5c964f089
+
+Creating Private Subnet in us-east-1c…
+✅ Private Subnet created: subnet-0e931575564631d10
+
 Attaching Internet Gateway…
-Setting up NAT Gateway…
+✅ IGW attached: igw-0632fdba709221039
+
+Creating NAT Gateway…
+✅ NAT Gateway created: nat-0bcd7383d6c0bf071
+
 Creating Route Tables…
-Associating Subnets and Routes…
-✅ Deployment Complete!
+✅ Public RT created and associated
+✅ Private RT created and associated
+
+Creating Security Groups…
+✅ Public SG: sg-0c942a2e3a17acf9b
+✅ Private SG: sg-058e1c5e8e690f017
+
+Creating and Associating Network ACLs…
+✅ Public NACL: acl-01e2acda05ce641e6
+✅ Private NACL: acl-048177a085bff24c7
+
+✅ SETUP COMPLETE!
+
+Resources Created:
+────────────────────────────
+VPC ID: vpc-042d1d117b588c730
+Public Subnet: subnet-0a82cb55a93068f54
+Private Subnets: subnet-0ada16ac5c964f089, subnet-0e931575564631d10
+IGW: igw-0632fdba709221039
+NAT: nat-0bcd7383d6c0bf071
+Public SG: sg-0c942a2e3a17acf9b
+Private SG: sg-058e1c5e8e690f017
+Public NACL: acl-01e2acda05ce641e6
+Private NACL: acl-048177a085bff24c7
+────────────────────────────
+
+## 🧾 Cost Awareness Note
+This project follows **AWS best practices for cost optimization** and uses free-tier or short-lived resources only.
+
+
 
 ## 📬 Connect with Me
 **Ayush Sharma** — *Cloud Solutions Architect | PowerShell & AWS Specialist*  
