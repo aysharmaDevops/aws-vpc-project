@@ -14,12 +14,16 @@ It demonstrates how to create a **VPC**, **public and private subnets**, **NAT g
 </p>
 
 ## 🧩 Key Components
+“Subnets distributed across multiple AZs ensure fault tolerance and scalability.”
+
 - VPC with CIDR block `10.0.0.0/16`
 - 2 Availability Zones (us-east-1a, us-east-1b)
 - 1 Public Subnet, 2 Private Subnets
 - Internet Gateway & NAT Gateway per AZ
 - Security Groups & NACLs for layered security
 - PowerShell automation scripts with cleanup utilities
+
+- 
 
 ## 🧰 Files Included
 - `PowerShell-Automation/FULLBUILD.ps1` → Complete infra creation script
