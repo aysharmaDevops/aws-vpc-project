@@ -25,118 +25,114 @@
 
 ---
 
-## 🌐 Overview
-This project automates the creation of a *highly available Multi-AZ AWS VPC* environment using PowerShell and AWS CLI. It’s designed to be easily reproducible, scalable, and ideal for DevOps engineers, cloud labs, or freelancing projects.
+Overview:
+
+This project automates the creation of a highly available Multi-AZ AWS VPC environment using PowerShell
+
+and AWS CLI.
+
+It is designed to be easily reproducible, scalable, and ideal for DevOps engineers, cloud labs, or freelancing
+
+clients who need a consistent AWS base network setup.
 
 ---
 
+Components Created:
+
+VPC: 10.0.0.0/16
+
+Subnets: 1 Public (AZ-a) + 2 Private (AZ-b, AZ-c)
+
+IGW + NAT: Internet and private connectivity
+
+Route Tables: Public RT (IGW) + Private RT (NAT)
+
+Security Groups: Public (SSH/HTTP/HTTPS) + Private (internal only)
+
+NACLs: Public = open, Private = restricted
 
 ---
 
-## 🏗️ Infrastructure Components
+Prerequisites:- AWS CLI v2.31+
 
-The automated PowerShell scripts build the following:
+- PowerShell v5.1+
 
-| Component | Description |
-|------------|-------------|
-| *VPC* | Creates a custom VPC with a /16 CIDR range |
-| *Subnets* | Public + Private subnets across multiple Availability Zones |
-| *Internet Gateway (IGW)* | Enables public subnet internet access |
-| *NAT Gateway* | Provides outbound access for private subnets |
-| *Route Tables* | Public & Private route tables with associations |
-| *Security Groups* | Granular ingress/egress traffic control |
-| *Network ACLs* | Stateless traffic filtering for public and private layers |
+- IAM user with sufficient permissions (AmazonVPCFullAccess, EC2FullAccess)
+
+- AWS credentials configured via: aws configure
 
 ---
 
-## 🧠 Project Structure
+Script Files:
 
-aws-vpc-project/
-├── diagrams/                   # Architecture visuals
-├── outputs/                    # Execution outputs (optional)
-├── scripts/                    # Placeholder for additional code
-└── PowerShell-Automation/      # Automation logic
-├── Ayush-VPC-FullBuild.ps1
-├── cleanup.ps1
-└── README.md
+Ayush-VPC-FullBuild.ps1 -> Creates entire Multi-AZ VPC setup with all components
 
-## ⚙️ PowerShell Automation Scripts
-
-### 1️⃣ Ayush-VPC-FullBuild.ps1
-> Provisions a complete AWS VPC setup (Multi-AZ with subnets, NAT, SGs, NACLs, etc.)
-
-*Usage:*
-```powershell
-powershell -ExecutionPolicy Bypass -File .\Ayush-VPC-FullBuild.ps1
-
-2️⃣ cleanup.ps1
-
-Safely deletes all chargeable AWS resources (NAT, Elastic IPs, VPC) in one go.
-Usage:
-powershell -ExecutionPolicy Bypass -File .\cleanup.ps1
-
-📊 Example Output
-
-Once completed, the script displays:
-✅ SETUP COMPLETE!
-VPC: vpc-xxxxxxxxxxxxxxxxx
-Public Subnet: subnet-xxxxxxxxxxxxxxx
-Private Subnets: subnet-xxxxxx, subnet-xxxxxx
-IGW: igw-xxxxxxxxxxxxx
-NAT: nat-xxxxxxxxxxxxx
-Public SG: sg-xxxxxxxxxxxxx
-Private SG: sg-xxxxxxxxxxxxx
-Public NACL: acl-xxxxxxxxxxxxx
-Private NACL: acl-xxxxxxxxxxxxx
----
-## 🧭 Architecture Diagram
-
-<p align="center">
-  <img src="https://via.placeholder.com/1000x550/232f3e/ffffff?text=AWS+Multi-AZ+VPC+Architecture+%E2%80%94+Public+%2B+Private+Subnets+%7C+IGW+%7C+NAT+%7C+RTs+%7C+NACLs+%7C+SGs" 
-       alt="AWS Multi-AZ VPC Architecture — Public + Private Subnets | IGW | NAT | RTs | NACLs | SGs"
-       width="90%">
-</p>
-
-<p align="center">
-  <em>High-level representation of the Multi-AZ AWS VPC setup with Internet Gateway, NAT Gateway, Route Tables, Network ACLs, and Security Groups.</em>
-</p>
-
----
-⸻
-
-🧰 Prerequisites
-	•	AWS CLI v2.31+
-	•	PowerShell v5.1+
-	•	IAM user with sufficient permissions (AmazonVPCFullAccess, EC2FullAccess)
-•	AWS credentials configured via:
-aws configure
-
-📬 Contact
-
-💼 Ayush Sharma
-📧 ayush.87sharma@hotmail.com
-🔗 LinkedIn Profile
-
-⸻
-
-Automating AWS Infrastructure the Right Way — with PowerShell Precision ⚡
-### Step 2️⃣ — Commit the Changes
-1. Scroll down.
-2. Commit message:
-docs: enhance project README for client presentation
-3. Click *Commit changes* ✅
+cleanup.ps1 -> Safely deletes all created resources to reset environment
 
 ---
 
-### Step 3️⃣ — Confirm the Repo Layout
-Your repo should now look like this:
-aws-vpc-project/
-├── PowerShell-Automation/
-│   ├── Ayush-VPC-FullBuild.ps1
-│   ├── cleanup.ps1
-│   └── README.md
-├── diagrams/
-├── outputs/
-├── scripts/
-├── LICENSE
-└── README.md
+Demo Output:
+
+SETUP COMPLETE!
+
+VPC: vpc-0a12b345c678d90ef
+
+Public Subnet: subnet-0a1b2c3d4e5f67890
+
+Private Subnets: subnet-0123abcd4567efgh, subnet-0987fedc6543cba21
+
+IGW: igw-012abc345def67890
+
+NAT: nat-0123abcd4567efgh
+
+Public SG: sg-01a2b3c4d5e6f7g8h
+
+Private SG: sg-0123456789abcdef0
+
+Public NACL: acl-0123abcd4567efgh
+
+Private NACL: acl-0123abcd4567efgh
+
+All resources are automatically tagged and configured to provide:
+
+- Multi-AZ redundancy
+
+- Public/Private routing separation
+
+- Security group and NACL isolation
+
+- One-command teardown via the cleanup script
+
+---Cleanup Script:
+
+To safely remove all generated resources:
+
+powershell.exe -ExecutionPolicy Bypass -File .\cleanup.ps1
+
+This ensures your AWS environment stays cost-efficient and reusable.
+
+---
+
+About the Author:
+
+Ayush Sharma
+
+Cloud Solutions Architect | PowerShell & AWS Specialist
+
+Email: ayush.87sharma@hotmail.com
+
+LinkedIn: https://www.linkedin.com/in/ayush-sharma-575010102
+
+GitHub: https://github.com/aysharmaDevops
+
+If you are looking for AWS infrastructure automation or IaC implementation using PowerShell or CLI, let's
+
+connect!
+
+---
+
+Freelancing Portfolio Note:
+
+When posting your project link on freelancing sites (Upwork, Fiverr, LinkedIn, etc.) - use this tagline:
+
+Automated AWS Multi-AZ VPC Setup using PowerShell (IaC) - includes Subnets, Route Tables, NAT
